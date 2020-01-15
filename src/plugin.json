@@ -1,7 +1,7 @@
 {
   "type": "app",
   "name": "Simple App",
-  "id": "simple-app",
+  "id": "yourorg-simple-app",
 
   "info": {
     "author": {
@@ -11,7 +11,9 @@
     "logos": {
       "small": "img/logo.png",
       "large": "img/logo.png"
-    }
+    },
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
   },
 
   "includes": [
@@ -37,5 +39,10 @@
       "type": "panel",
       "name": "Anything -- just display?"
     }
-  ]
+  ],
+
+  "dependencies": {
+    "grafanaVersion": "6.6.x",
+    "plugins": []
+  }
 }
