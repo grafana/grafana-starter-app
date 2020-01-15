@@ -4,7 +4,7 @@ export class ExampleConfigCtrl {
   static templateUrl = 'legacy/config.html';
 
   appEditCtrl: any;
-  appModel: PluginMeta;
+  appModel?: PluginMeta;
 
   /** @ngInject */
   constructor($scope: any, $injector: any) {
@@ -25,7 +25,7 @@ export class ExampleConfigCtrl {
   }
 
   postUpdate() {
-    if (!this.appModel.enabled) {
+    if (!this.appModel?.enabled) {
       console.log('Not enabled...');
       return;
     }

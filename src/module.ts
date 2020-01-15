@@ -15,12 +15,12 @@ export {
 
 export const plugin = new AppPlugin<ExampleAppSettings>()
   .setRootPage(ExampleRootPage)
-  // .addConfigPage({
-  //   title: 'Page 1',
-  //   icon: 'fa fa-info',
-  //   body: ExamplePage1,
-  //   id: 'page1',
-  // })
+  .addConfigPage({
+    title: 'Page 1',
+    icon: 'fa fa-info',
+    body: ExamplePage1,
+    id: 'page1',
+  })
   .addConfigPage({
     title: 'Page 2',
     icon: 'fa fa-user',
