@@ -22,8 +22,29 @@
       "name": "Angular Page",
       "component": "AngularExamplePageCtrl",
       "role": "Viewer",
+      "addToNav": true
+    },
+    {
+      "type": "page",
+      "name": "Root Page (react)",
+      "path": "/a/yourorg-simple-app",
+      "role": "Viewer",
       "addToNav": true,
       "defaultNav": true
+    },
+    {
+      "type": "page",
+      "name": "Root Page (tab B)",
+      "path": "/a/yourorg-simple-app/?tab=B",
+      "role": "Viewer",
+      "addToNav": true
+    },
+    {
+      "type": "page",
+      "name": "React Config",
+      "path": "/plugins/yourorg-simple-app/?page=page2",
+      "role": "Admin",
+      "addToNav": true
     },
     {
       "type": "dashboard",
