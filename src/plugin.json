@@ -19,13 +19,6 @@
   "includes": [
     {
       "type": "page",
-      "name": "Angular Page",
-      "component": "AngularExamplePageCtrl",
-      "role": "Viewer",
-      "addToNav": true
-    },
-    {
-      "type": "page",
       "name": "Root Page (react)",
       "path": "/a/yourorg-simple-app",
       "role": "Viewer",
@@ -57,8 +50,11 @@
       "path": "dashboards/stats.json"
     },
     {
-      "type": "panel",
-      "name": "Anything -- just display?"
+      "type": "page",
+      "name": "Angular Page",
+      "component": "AngularExamplePageCtrl",
+      "role": "Viewer",
+      "addToNav": true
     }
   ],
 
