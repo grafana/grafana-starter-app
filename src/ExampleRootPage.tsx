@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react';
 
 // Types
-import { NavModelItem, AppRootProps } from '@grafana/data';
+import { NavModelItem, AppRootProps, PluginPageRouter } from '@grafana/data';
 
 interface Props extends AppRootProps {}
 
@@ -15,20 +15,8 @@ export class ExampleRootPage<ExampleAppSettings> extends PureComponent<Props> {
     super(props);
   }
 
-  componentDidMount() {
-    this.updateNav();
-  }
-
-  componentDidUpdate(prevProps: Props) {
-    if (this.props.query !== prevProps.query) {
-      if (this.props.query.tab !== prevProps.query.tab) {
-        this.updateNav();
-      }
-    }
-  }
-
   updateNav() {
-    const { path, onNavChanged, query, meta } = this.props;
+    const { path, query, meta } = this.props;
 
     const tabs: NavModelItem[] = [];
     tabs.push({
@@ -70,34 +58,46 @@ export class ExampleRootPage<ExampleAppSettings> extends PureComponent<Props> {
       url: path,
       children: tabs,
     };
+  }
 
-    // Update the page header
-    onNavChanged({
-      node: node,
-      main: node,
-    });
+  renderPage1() {
+    return (
+      <div style={{ padding: '50px' }}>
+        <h1>Page1</h1>
+        <a href="a/yourorg-simple-app/">Go to home</a>
+      </div>
+    );
+  }
+
+  renderPage2() {
+    return (
+      <div style={{ padding: '50px' }}>
+        <h1>Page2</h1>
+        <a href="a/yourorg-simple-app/">Go to home</a>
+      </div>
+    );
+  }
+
+  renderHome() {
+    return (
+      <div style={{ padding: '50px' }}>
+        <h1>home</h1>
+        <a href="a/yourorg-simple-app/page1">Go to page1</a>
+        <br />
+        <a href="a/yourorg-simple-app/page1">Go to page2</a>
+      </div>
+    );
   }
 
   render() {
-    const { path, query, meta } = this.props;
+    const { Router, Route } = PluginPageRouter;
 
     return (
-      <div>
-        QUERY: <pre>{JSON.stringify(query)}</pre>
-        <br />
-        <ul>
-          <li>
-            <a href={path + '?x=1'}>111</a>
-          </li>
-          <li>
-            <a href={path + '?x=AAA'}>AAA</a>
-          </li>
-          <li>
-            <a href={path + '?x=1&y=2&y=3'}>ZZZ</a>
-          </li>
-        </ul>
-        <pre>{JSON.stringify(meta.jsonData)}</pre>
-      </div>
+      <Router>
+        <Route path="/" component={this.renderHome} />
+        <Route path="/page1" component={this.renderPage1} />
+        <Route path="/page2" component={this.renderPage2} />
+      </Router>
     );
   }
 }
