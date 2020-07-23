@@ -13,6 +13,7 @@
   "devDependencies": {
     "@grafana/data": "next",
     "@grafana/toolkit": "next",
-    "@grafana/ui": "next"
+    "@grafana/ui": "next",
+    "eslint-plugin-react-hooks": "4.0.8"
   }
 }

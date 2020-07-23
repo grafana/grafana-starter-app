@@ -34,7 +34,7 @@ export const ExampleRootPage = React.memo(function ExampleRootPage({ path, onNav
     });
 
     const activeTab = query.tab || TAB_ID_B;
-    tabs.forEach((tab) => tab.active = activeTab === tab.id);
+    tabs.forEach(tab => (tab.active = activeTab === tab.id));
 
     const node = {
       text: 'This is the Page title',
