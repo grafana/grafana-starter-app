@@ -15,6 +15,9 @@ jobs:
     - run:
         name: Run Toolkit Build
         command: npx grafana-toolkit plugin:ci-build
+    - run:
+        name: Move Build Result to Ci Folder
+        command: npx grafana-toolkit plugin:ci-build --finish
     - save_cache:
         paths:
         - node_modules
