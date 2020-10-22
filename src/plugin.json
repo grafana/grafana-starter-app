@@ -27,8 +27,8 @@
     },
     {
       "type": "page",
-      "name": "Root Page (tab B)",
-      "path": "/a/yourorg-simple-app/?tab=B",
+      "name": "Root Page (Tab B)",
+      "path": "/a/yourorg-simple-app/?tab=b",
       "role": "Viewer",
       "addToNav": true
     },
