@@ -34,7 +34,7 @@
     },
     {
       "type": "page",
-      "name": "React Config",
+      "name": "Config",
       "path": "/plugins/yourorg-simple-app/?page=page2",
       "role": "Admin",
       "addToNav": true
@@ -48,13 +48,6 @@
       "type": "dashboard",
       "name": "Lots of Stats",
       "path": "dashboards/stats.json"
-    },
-    {
-      "type": "page",
-      "name": "Angular Page",
-      "component": "AngularExamplePageCtrl",
-      "role": "Viewer",
-      "addToNav": true
     }
   ],
 
