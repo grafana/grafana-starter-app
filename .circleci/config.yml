@@ -99,17 +99,9 @@ jobs:
           sudo service grafana-server start
           sudo grafana-cli --version
     - run:
-        name: Run e2e tests
+        name: Run tests
         command: |
-          npx grafana-toolkit plugin:ci-test
-    - persist_to_workspace:
-        root: .
-        paths:
-        - ci/jobs/test_6_2_5
-    - store_test_results:
-        path: ci/jobs/test_6_2_5
-    - store_artifacts:
-        path: ci/jobs/test_6_2_5
+          npx grafana-toolkit plugin:test
   test_6_3_0_beta1:
     docker:
     - image: circleci/node:12-browsers
@@ -137,17 +129,9 @@ jobs:
           sudo service grafana-server start
           sudo grafana-cli --version
     - run:
-        name: Run e2e tests
+        name: Run tests
         command: |
-          npx grafana-toolkit plugin:ci-test
-    - persist_to_workspace:
-        root: .
-        paths:
-        - ci/jobs/test_6_3_0_beta1
-    - store_test_results:
-        path: ci/jobs/test_6_3_0_beta1
-    - store_artifacts:
-        path: ci/jobs/test_6_3_0_beta1
+          npx grafana-toolkit plugin:test
   report:
     docker:
     - image: circleci/node:12

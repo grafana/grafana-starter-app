@@ -1,19 +1,23 @@
 {
   "name": "simple-app",
   "version": "1.0.0",
-  "description": "Simple App Panel",
+  "description": "Simple App Plugin",
+  "author": "Grafana Labs",
+  "license": "Apache-2.0",
   "scripts": {
     "build": "grafana-toolkit plugin:build",
     "test": "grafana-toolkit plugin:test",
     "dev": "grafana-toolkit plugin:dev",
-    "watch": "grafana-toolkit plugin:dev --watch"
+    "watch": "grafana-toolkit plugin:dev --watch",
+    "start": "yarn watch"
   },
-  "author": "Grafana Labs",
-  "license": "Apache-2.0",
-  "devDependencies": {
+  "dependencies": {
     "@grafana/data": "next",
+    "@grafana/runtime": "next",
+    "@grafana/ui": "next"
+  },
+  "devDependencies": {
     "@grafana/toolkit": "next",
-    "@grafana/ui": "next",
     "eslint-plugin-react-hooks": "4.0.8"
   }
 }
