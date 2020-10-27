@@ -1,6 +1,6 @@
 import { AppRootProps } from '@grafana/data';
 import { pages } from 'pages';
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { useNavModel } from 'utils/hooks';
 
 export const ExampleRootPage = React.memo(function ExampleRootPage(props: AppRootProps) {
@@ -14,7 +14,9 @@ export const ExampleRootPage = React.memo(function ExampleRootPage(props: AppRoo
   const pathWithoutLeadingSlash = path.replace(/^\//, '');
 
   // Update the navigation when the tab or path changes
-  const navModel = useNavModel(tab, pathWithoutLeadingSlash, meta);
+  const navModel = useNavModel(
+    useMemo(() => ({ tab, pages, path: pathWithoutLeadingSlash, meta }), [meta, pathWithoutLeadingSlash, tab])
+  );
   useEffect(() => {
     onNavChanged(navModel);
   }, [navModel, onNavChanged]);

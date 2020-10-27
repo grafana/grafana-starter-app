@@ -3,7 +3,7 @@ import { A } from './A';
 import { B } from './B';
 import { C } from './C';
 
-type PageDefinition = {
+export type PageDefinition = {
   component: React.FC<AppRootProps>;
   icon: string;
   id: string;

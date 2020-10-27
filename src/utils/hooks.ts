@@ -1,9 +1,16 @@
 import { AppRootProps, NavModelItem } from '@grafana/data';
-import { pages } from 'pages';
+import { PageDefinition } from 'pages';
 import { useMemo } from 'react';
 import { APP_TITLE, APP_SUBTITLE } from './consts';
 
-export function useNavModel(tab: string, path: string, meta: AppRootProps['meta']) {
+type Args = {
+  meta: AppRootProps['meta'];
+  pages: PageDefinition[];
+  path: string;
+  tab: string;
+};
+
+export function useNavModel({ meta, pages, path, tab }: Args) {
   return useMemo(() => {
     const tabs: NavModelItem[] = [];
 
@@ -37,5 +44,5 @@ export function useNavModel(tab: string, path: string, meta: AppRootProps['meta'
       node,
       main: node,
     };
-  }, [meta.info.logos.large, path, tab]);
+  }, [meta.info.logos.large, pages, path, tab]);
 }
