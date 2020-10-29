@@ -19,13 +19,13 @@ export const plugin = new AppPlugin<ExampleAppSettings>()
   .setRootPage((ExampleRootPage as unknown) as ComponentClass<AppRootProps>)
   .addConfigPage({
     title: 'Page 1',
-    icon: 'fa fa-info',
+    icon: 'info-circle',
     body: ExamplePage1,
     id: 'page1',
   })
   .addConfigPage({
     title: 'Page 2',
-    icon: 'fa fa-user',
+    icon: 'user',
     body: ExamplePage2,
     id: 'page2',
   });

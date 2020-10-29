@@ -13,19 +13,19 @@ export type PageDefinition = {
 export const pages: PageDefinition[] = [
   {
     component: A,
-    icon: 'fa fa-fw fa-file-text-o',
+    icon: 'file-alt',
     id: 'a',
     text: 'Tab A',
   },
   {
     component: B,
-    icon: 'fa fa-fw fa-file-text-o',
+    icon: 'file-alt',
     id: 'b',
     text: 'Tab B',
   },
   {
     component: C,
-    icon: 'fa fa-fw fa-file-text-o',
+    icon: 'file-alt',
     id: 'c',
     text: 'Tab C',
   },
