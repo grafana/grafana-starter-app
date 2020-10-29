@@ -1,2 +1,2 @@
-export const APP_TITLE = 'Grafana Cloud Alerting';
-export const APP_SUBTITLE = 'Manage rules & notifications';
+export const APP_TITLE = 'Simple App Plugin';
+export const APP_SUBTITLE = 'Simple App Plugin subtitle';
