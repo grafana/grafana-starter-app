@@ -13,8 +13,6 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@grafana/data": "latest",
-    "@grafana/runtime": "latest",
-    "@grafana/ui": "latest",
     "@grafana/toolkit": "latest"
   },
   "engines": {
