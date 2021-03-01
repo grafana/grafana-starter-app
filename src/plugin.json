@@ -1,17 +1,24 @@
 {
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
   "type": "app",
   "name": "Simple App",
-  "id": "yourorg-simple-app",
+  "id": "myorgid-simple-app",
 
   "info": {
+    "description": "Grafana App Plugin Template",
     "author": {
-      "name": "Grafana Project",
-      "url": "https://grafana.com"
+      "name": "Your Name"
     },
+    "keywords": ["panel", "template"],
     "logos": {
-      "small": "img/logo.png",
-      "large": "img/logo.png"
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
     },
+    "links": [
+      { "name": "Website", "url": "https://github.com/grafana/grafana-starter-app" },
+      { "name": "License", "url": "https://github.com/grafana/grafana-starter-app/blob/master/LICENSE" }
+    ],
+    "screenshots": [],
     "version": "%VERSION%",
     "updated": "%TODAY%"
   },
@@ -48,18 +55,12 @@
       "type": "dashboard",
       "name": "Lots of Stats",
       "path": "dashboards/stats.json"
-    },
-    {
-      "type": "page",
-      "name": "Angular Page",
-      "component": "AngularExamplePageCtrl",
-      "role": "Viewer",
-      "addToNav": true
     }
   ],
 
   "dependencies": {
-    "grafanaVersion": "6.6.x",
+    "grafanaDependency": ">=7.0.0",
+    "grafanaVersion": "7.0.0",
     "plugins": []
   }
 }
