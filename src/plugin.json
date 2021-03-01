@@ -15,7 +15,7 @@
       "large": "img/logo.svg"
     },
     "links": [
-      { "name": "Website", "url": "https://github.com/grafana/grafana-starter-panel" },
+      { "name": "Website", "url": "https://github.com/grafana/grafana-starter-app" },
       { "name": "License", "url": "https://github.com/grafana/grafana-starter-app/blob/master/LICENSE" }
     ],
     "screenshots": [],
