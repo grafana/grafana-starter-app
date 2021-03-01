@@ -5,7 +5,7 @@
   "id": "myorgid-simple-app",
 
   "info": {
-    "description": "Grafana Panel Plugin Template",
+    "description": "Grafana App Plugin Template",
     "author": {
       "name": "Your Name"
     },
