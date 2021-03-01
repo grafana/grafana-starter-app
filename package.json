@@ -1,25 +1,23 @@
 {
   "name": "simple-app",
   "version": "1.0.0",
-  "description": "Simple App Plugin",
-  "author": "Grafana Labs",
-  "license": "Apache-2.0",
+  "description": "Grafana App Plugin Template",
   "scripts": {
     "build": "grafana-toolkit plugin:build",
     "test": "grafana-toolkit plugin:test",
     "dev": "grafana-toolkit plugin:dev",
     "watch": "grafana-toolkit plugin:dev --watch",
-    "start": "yarn watch",
-    "test:accessibility": "pa11y-ci --config .pa11yci.json"
+    "sign": "grafana-toolkit plugin:sign"
   },
-  "dependencies": {
-    "@grafana/data": "next",
-    "@grafana/runtime": "next",
-    "@grafana/ui": "next"
-  },
+  "author": "Grafana Labs",
+  "license": "Apache-2.0",
   "devDependencies": {
-    "@grafana/toolkit": "next",
-    "eslint-plugin-react-hooks": "4.0.8",
-    "pa11y-ci": "^2.4.0"
+    "@grafana/data": "latest",
+    "@grafana/runtime": "latest",
+    "@grafana/ui": "latest",
+    "@grafana/toolkit": "latest"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
