@@ -1,7 +1,7 @@
 import { PluginMeta } from '@grafana/data';
 
 export class ExampleConfigCtrl {
-  static template = '<h2><hello/h2>';
+  static template = '<h2>hello</h2>';
 
   appEditCtrl: any;
   appModel?: PluginMeta;
