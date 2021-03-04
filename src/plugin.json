@@ -27,7 +27,7 @@
     {
       "type": "page",
       "name": "Root Page (react)",
-      "path": "/a/yourorg-simple-app",
+      "path": "/a/myorgid-simple-app",
       "role": "Viewer",
       "addToNav": true,
       "defaultNav": true
@@ -35,14 +35,14 @@
     {
       "type": "page",
       "name": "Root Page (Tab B)",
-      "path": "/a/yourorg-simple-app/?tab=b",
+      "path": "/a/myorgid-simple-app/?tab=b",
       "role": "Viewer",
       "addToNav": true
     },
     {
       "type": "page",
       "name": "React Config",
-      "path": "/plugins/yourorg-simple-app/?page=page2",
+      "path": "/plugins/myorgid-simple-app/?page=page2",
       "role": "Admin",
       "addToNav": true
     },

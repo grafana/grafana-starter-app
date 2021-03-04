@@ -59,7 +59,7 @@
       "timeFrom": null,
       "timeShift": null,
       "title": "Simple dummy streaming example",
-      "type": "graph2"
+      "type": "timeseries"
     }
   ],
   "schemaVersion": 18,
@@ -77,7 +77,8 @@
     "time_options": ["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"]
   },
   "timezone": "",
-  "title": "simple streaming",
+  "title": "Starter App - Streaming",
   "uid": "TbbEZjzWz",
-  "version": 1
+  "revision": 4,
+  "version": 4
 }
