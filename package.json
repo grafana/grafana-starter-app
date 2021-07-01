@@ -14,7 +14,11 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@grafana/data": "latest",
-    "@grafana/toolkit": "latest"
+    "@grafana/ui": "latest",
+    "@grafana/runtime": "latest",
+    "@grafana/toolkit": "latest",
+    "@types/react-router-dom": "^5.1.7",
+    "react-router-dom": "^5.2.0"
   },
   "engines": {
     "node": ">=14"

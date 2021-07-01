@@ -3,6 +3,7 @@
   "type": "app",
   "name": "Simple App",
   "id": "myorgid-simple-app",
+  "executable": "gpx_sample",
 
   "info": {
     "description": "Grafana App Plugin Template",
@@ -35,15 +36,8 @@
     {
       "type": "page",
       "name": "Root Page (Tab B)",
-      "path": "/a/myorgid-simple-app/?tab=b",
+      "path": "/a/myorgid-simple-app/bbb",
       "role": "Viewer",
-      "addToNav": true
-    },
-    {
-      "type": "page",
-      "name": "React Config",
-      "path": "/plugins/myorgid-simple-app/?page=page2",
-      "role": "Admin",
       "addToNav": true
     },
     {
@@ -59,8 +53,8 @@
   ],
 
   "dependencies": {
-    "grafanaDependency": ">=7.0.0",
-    "grafanaVersion": "7.0.0",
+    "grafanaDependency": ">=8.0.0",
+    "grafanaVersion": "8.0.0",
     "plugins": []
   }
 }
