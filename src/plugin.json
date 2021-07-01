@@ -3,7 +3,7 @@
   "type": "app",
   "name": "Simple App",
   "id": "myorgid-simple-app",
-  "executable": "gpx_sample",
+  "executable": "gpx_app_datasource_backend",
 
   "info": {
     "description": "Grafana App Plugin Template",

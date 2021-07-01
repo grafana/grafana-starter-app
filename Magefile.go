@@ -13,5 +13,9 @@ func Hello() {
 	fmt.Println("hello plugin developer!")
 }
 
+// var _ = build.SetBeforeBuildCallback(func(cfg build.Config) (build.Config, error) {
+// 	return cfg, nil
+// })
+
 // Default configures the default target.
 var Default = build.BuildAll

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Grafana App Plugin Template",
   "scripts": {
-    "build": "grafana-toolkit plugin:build",
+    "build": "rm -rf dist && npx grafana-toolkit plugin:build && mage build:backend",
     "test": "grafana-toolkit plugin:test",
     "dev": "grafana-toolkit plugin:dev",
     "watch": "grafana-toolkit plugin:dev --watch",
@@ -18,7 +18,11 @@
     "@grafana/runtime": "latest",
     "@grafana/toolkit": "latest",
     "@types/react-router-dom": "^5.1.7",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "emotion": "10.0.27"
+  },
+  "resolutions": {
+    "rxjs": "6.6.3"
   },
   "engines": {
     "node": ">=14"

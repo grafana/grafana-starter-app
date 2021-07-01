@@ -1,0 +1,24 @@
+{
+  "type": "panel",
+  "name": "Example app panel plugin",
+  "id": "example-app-panel",
+
+  "info": {
+    "description": "Grafana Panel Plugin Template",
+    "author": {
+      "name": "Your Name"
+    },
+    "keywords": ["panel", "template"],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      {"name": "Website", "url": "https://github.com/grafana/grafana-starter-panel"},
+      {"name": "License", "url": "https://github.com/grafana/grafana-starter-panel/blob/master/LICENSE"}
+    ],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  }
+}
