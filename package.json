@@ -13,10 +13,14 @@
   "author": "Grafana Labs",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@grafana/data": "latest",
     "@grafana/toolkit": "latest"
   },
   "engines": {
     "node": ">=14"
+  },
+  "dependencies": {
+    "@grafana/data": "^8.4.2",
+    "@grafana/runtime": "^8.4.1",
+    "@grafana/ui": "^8.4.1"
   }
 }
