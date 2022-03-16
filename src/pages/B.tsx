@@ -3,29 +3,22 @@ import { PanelRenderer } from '@grafana/runtime';
 import { LegendDisplayMode, PanelChrome, PanelChromeProps } from '@grafana/ui';
 import React, { FC } from 'react';
 
-// Set amount of generated datapoints
-// as well as min and max values of generated data
-const DATA_LENGTH = 500;
-const VAL_MIN = 1;
-const VAL_MAX = 6666;
-
 export const B: FC<AppRootProps> = ({ query, path, meta }) => {
   // Create data frames, in this case we simply generate
   // random values over a fixed interval from the current time
   const times = [];
-  const vals = [];
+  const vals = [10, 20, 30, -20, 33.6234, null, 25, 0, 20, 20, 0, 0, -29.12345, null, -23.456];
 
   // Grab dates an calculate a week ago
   // and the corresponding step amount
   let now = dateTime();
   let weekAgo = dateTime().subtract(1, 'week');
   let stepper = dateTime().subtract(1, 'week');
-  let step = (now.unix() - weekAgo.unix()) / DATA_LENGTH;
+  let step = (now.unix() - weekAgo.unix()) / vals.length;
 
   // Generated random data points at evenly
   // separated times across the past week
-  for (let i = 0; i < DATA_LENGTH; i++) {
-    vals.push(Math.random() * (VAL_MAX - VAL_MIN) + VAL_MIN);
+  for (let i = 0; i < vals.length; i++) {
     times.push(stepper.add(step, 'seconds').valueOf());
   }
 
@@ -34,7 +27,7 @@ export const B: FC<AppRootProps> = ({ query, path, meta }) => {
   // See https://grafana.com/docs/grafana/latest/developers/plugins/data-frames/
   // and https://grafana.com/docs/grafana/latest/developers/plugins/working-with-data-frames/
   const frame = toDataFrame({
-    name: 'last_week_random',
+    name: 'last_week_example',
     fields: [
       { name: 'Time', type: FieldType.time, values: times },
       { name: 'Value', type: FieldType.number, values: vals },
