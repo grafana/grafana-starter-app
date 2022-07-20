@@ -26,3 +26,10 @@ work/
 ci/
 e2e-results/
 
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
