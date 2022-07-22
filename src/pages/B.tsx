@@ -1,5 +1,7 @@
-import React, { FC } from 'react';
+import React from 'react';
+import { AppRootProps } from '@grafana/data';
+import { ExampleAppSettings } from 'types';
 
-export const B: FC = () => {
-  return <div>B</div>;
+export const PageBBB = (props: AppRootProps<ExampleAppSettings>) => {
+  return <div>BBBBBB: {new Date().toISOString()}</div>;
 };

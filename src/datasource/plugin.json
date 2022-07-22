@@ -1,0 +1,24 @@
+{
+  "type": "datasource",
+  "name": "Grafana App Data Source Backend Plugin Template",
+  "id": "myorgid-simple-app-backend-datasource",
+  "metrics": true,
+  "backend": true,
+  "executable": "gpx_app_datasource_backend",
+
+  "info": {
+    "description": "Example datasource in an application",
+    "author": {
+      "name": "Your Name"
+    },
+    "keywords": ["Simple"],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  }
+}
