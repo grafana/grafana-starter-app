@@ -1,3 +1,11 @@
+
+## ⚠️ Deprecated!
+
+**This repository is deprecated.** <br />
+A more up-to-date version is available here: https://github.com/grafana/grafana-plugin-examples/tree/master/examples/app-basic
+
+---
+
 # Grafana App Plugin Template
 
 [![Build](https://github.com/grafana/grafana-starter-app/workflows/CI/badge.svg)](https://github.com/grafana/grafana-starter-app/actions?query=workflow%3A%22CI%22)
