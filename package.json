@@ -13,11 +13,22 @@
   "author": "Grafana Labs",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@grafana/data": "latest",
     "@grafana/toolkit": "latest"
+  },
+  "dependencies": {
+    "@grafana/runtime": "latest",
+    "@grafana/ui": "latest"
   },
   "engines": {
     "node": ">=14"
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.2.1",
+  "resolutions": {
+    "@grafana/data": "portal:/Users/torkelodegaard/dev/grafana/packages/grafana-data",
+    "@grafana/e2e": "portal:/Users/torkelodegaard/dev/grafana/packages/grafana-e2e",
+    "@grafana/e2e-selectors": "portal:/Users/torkelodegaard/dev/grafana/packages/grafana-e2e-selectors",
+    "@grafana/runtime": "portal:/Users/torkelodegaard/dev/grafana/packages/grafana-runtime",
+    "@grafana/schema": "portal:/Users/torkelodegaard/dev/grafana/packages/grafana-schema",
+    "@grafana/ui": "portal:/Users/torkelodegaard/dev/grafana/packages/grafana-ui"
+  }
 }
