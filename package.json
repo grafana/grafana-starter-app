@@ -24,11 +24,11 @@
   },
   "packageManager": "yarn@3.2.1",
   "resolutions": {
-    "@grafana/data": "portal:/Users/torkelodegaard/dev/grafana/packages/grafana-data",
-    "@grafana/e2e": "portal:/Users/torkelodegaard/dev/grafana/packages/grafana-e2e",
-    "@grafana/e2e-selectors": "portal:/Users/torkelodegaard/dev/grafana/packages/grafana-e2e-selectors",
-    "@grafana/runtime": "portal:/Users/torkelodegaard/dev/grafana/packages/grafana-runtime",
-    "@grafana/schema": "portal:/Users/torkelodegaard/dev/grafana/packages/grafana-schema",
-    "@grafana/ui": "portal:/Users/torkelodegaard/dev/grafana/packages/grafana-ui"
+    "@grafana/data": "portal:/home/torkelo/dev/go/src/github.com/grafana/grafana/packages/grafana-data",
+    "@grafana/e2e": "portal:/home/torkelo/dev/go/src/github.com/grafana/grafana/packages/grafana-e2e",
+    "@grafana/e2e-selectors": "portal:/home/torkelo/dev/go/src/github.com/grafana/grafana/packages/grafana-e2e-selectors",
+    "@grafana/runtime": "portal:/home/torkelo/dev/go/src/github.com/grafana/grafana/packages/grafana-runtime",
+    "@grafana/schema": "portal:/home/torkelo/dev/go/src/github.com/grafana/grafana/packages/grafana-schema",
+    "@grafana/ui": "portal:/home/torkelo/dev/go/src/github.com/grafana/grafana/packages/grafana-ui"
   }
 }
