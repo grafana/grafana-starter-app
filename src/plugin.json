@@ -41,8 +41,8 @@
     },
     {
       "type": "page",
-      "name": "Info",
-      "path": "/a/myorgid-simple-app/info",
+      "name": "Graph",
+      "path": "/a/myorgid-simple-app/graph",
       "role": "Viewer",
       "addToNav": true
     },

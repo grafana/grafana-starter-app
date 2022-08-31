@@ -2,7 +2,7 @@ import { PluginPage } from '@grafana/runtime';
 import { Field, FieldSet, Input } from '@grafana/ui';
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import { items } from './Catalog';
+import { items } from './CatalogPage';
 
 export function ItemPage(props: RouteComponentProps<{ id: string }>) {
   const index = parseInt(props.match.params.id, 10);
