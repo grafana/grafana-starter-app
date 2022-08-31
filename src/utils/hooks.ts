@@ -6,11 +6,10 @@ import { APP_TITLE, APP_SUBTITLE } from './consts';
 type Args = {
   meta: AppRootProps['meta'];
   pages: PageDefinition[];
-  path: string;
   tab: string;
 };
 
-export function useNavModel({ meta, pages, path, tab }: Args) {
+export function useNavModel({ meta, pages, tab }: Args) {
   return useMemo(() => {
     const tabs: NavModelItem[] = [];
 
@@ -19,7 +18,7 @@ export function useNavModel({ meta, pages, path, tab }: Args) {
         text,
         icon,
         id,
-        url: `${path}?tab=${id}`,
+        url: `a/myorgid-simple-app?tab=${id}`,
       });
 
       if (tab === id) {
@@ -36,7 +35,7 @@ export function useNavModel({ meta, pages, path, tab }: Args) {
       text: APP_TITLE,
       img: meta.info.logos.large,
       subTitle: APP_SUBTITLE,
-      url: path,
+      url: 'a/myorgid-simple-app?tab=a',
       children: tabs,
     };
 
@@ -44,5 +43,5 @@ export function useNavModel({ meta, pages, path, tab }: Args) {
       node,
       main: node,
     };
-  }, [meta.info.logos.large, pages, path, tab]);
+  }, [meta.info.logos.large, pages, tab]);
 }
