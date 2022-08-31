@@ -7,14 +7,10 @@ import { ExamplePage2 } from './config/ExamplePage2';
 import { ExampleAppSettings } from './types';
 
 export { ExampleConfigCtrl as ConfigCtrl };
-import { NewRootPage } from './NewRootPage';
-import { config } from '@grafana/runtime';
-import { ExampleRootPage } from 'ExampleRootPage';
-
-const rootPage = config.featureToggles.topnav ? NewRootPage : ExampleRootPage;
+import { App } from './App';
 
 export const plugin = new AppPlugin<ExampleAppSettings>()
-  .setRootPage((rootPage as unknown) as ComponentClass<AppRootProps>)
+  .setRootPage((App as unknown) as ComponentClass<AppRootProps>)
   .addConfigPage({
     title: 'Page 1',
     icon: 'info-circle',

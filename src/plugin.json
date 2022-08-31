@@ -33,16 +33,16 @@
   "includes": [
     {
       "type": "page",
-      "name": "Tab A",
-      "path": "/a/myorgid-simple-app?tab=a",
+      "name": "Catalog",
+      "path": "/a/myorgid-simple-app",
       "role": "Viewer",
       "addToNav": true,
       "defaultNav": true
     },
     {
       "type": "page",
-      "name": "Tab B",
-      "path": "/a/myorgid-simple-app?tab=b",
+      "name": "Info",
+      "path": "/a/myorgid-simple-app/info",
       "role": "Viewer",
       "addToNav": true
     },
