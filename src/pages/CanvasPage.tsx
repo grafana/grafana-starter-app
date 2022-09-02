@@ -1,9 +1,10 @@
-import { AppRootProps, dateTime, FieldType, DataFrame, PanelData, LoadingState, toDataFrame } from '@grafana/data';
-import { PanelRenderer } from '@grafana/runtime';
+import { dateTime, FieldType, DataFrame, PanelData, LoadingState, toDataFrame } from '@grafana/data';
+import { PanelRenderer, PluginPageLayout } from '@grafana/runtime';
 import { LegendDisplayMode, PanelChrome, PanelChromeProps } from '@grafana/ui';
-import React, { FC } from 'react';
+import { PluginPage } from 'PluginPage';
+import React from 'react';
 
-export const B: FC<AppRootProps> = ({ query, path, meta }) => {
+export function CanvasPage() {
   // Create data frames, in this case we simply generate
   // random values over a fixed interval from the current time
   const times = [];
@@ -90,7 +91,7 @@ export const B: FC<AppRootProps> = ({ query, path, meta }) => {
   };
 
   return (
-    <div>
+    <PluginPage layout={PluginPageLayout?.Canvas}>
       <PanelChrome {...panelProps}>
         {(innerWidth, innerHeight) => (
           <PanelRenderer
@@ -104,6 +105,6 @@ export const B: FC<AppRootProps> = ({ query, path, meta }) => {
           />
         )}
       </PanelChrome>
-    </div>
+    </PluginPage>
   );
-};
+}

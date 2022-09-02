@@ -1,30 +1,31 @@
 import { AppRootProps, NavModelItem } from '@grafana/data';
-import { PageDefinition } from 'pages';
-import { useMemo } from 'react';
+import { useEffect } from 'react';
+import { PLUGIN_URL_PATH } from 'types';
 import { APP_TITLE, APP_SUBTITLE } from './consts';
+import { useLocation } from 'react-router-dom';
 
-type Args = {
-  meta: AppRootProps['meta'];
-  pages: PageDefinition[];
-  tab: string;
-};
+export function useNavModel({ meta, onNavChanged }: AppRootProps) {
+  const location = useLocation();
 
-export function useNavModel({ meta, pages, tab }: Args) {
-  return useMemo(() => {
-    const tabs: NavModelItem[] = [];
+  useEffect(() => {
+    const tabs: NavModelItem[] = [
+      {
+        text: 'Catalog',
+        url: `${PLUGIN_URL_PATH}/catalog`,
+        icon: 'file-alt',
+      },
+      {
+        text: 'Canvas',
+        url: `${PLUGIN_URL_PATH}/canvas`,
+        icon: 'file-alt',
+      },
+    ];
 
-    pages.forEach(({ text, icon, id }) => {
-      tabs.push({
-        text,
-        icon,
-        id,
-        url: `a/myorgid-simple-app?tab=${id}`,
-      });
-
-      if (tab === id) {
-        tabs[tabs.length - 1].active = true;
+    for (const tab of tabs) {
+      if (tab.url === location.pathname) {
+        tab.active = true;
       }
-    });
+    }
 
     // Fallback if current `tab` doesn't match any page
     if (!tabs.some(({ active }) => active)) {
@@ -39,9 +40,11 @@ export function useNavModel({ meta, pages, tab }: Args) {
       children: tabs,
     };
 
-    return {
+    const navModel = {
       node,
       main: node,
     };
-  }, [meta.info.logos.large, pages, tab]);
+
+    onNavChanged(navModel);
+  }, [meta.info.logos.large, location, onNavChanged]);
 }

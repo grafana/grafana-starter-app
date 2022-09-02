@@ -34,15 +34,15 @@
     {
       "type": "page",
       "name": "Catalog",
-      "path": "/a/myorgid-simple-app",
+      "path": "/a/myorgid-simple-app/catalog",
       "role": "Viewer",
       "addToNav": true,
       "defaultNav": true
     },
     {
       "type": "page",
-      "name": "Graph",
-      "path": "/a/myorgid-simple-app/graph",
+      "name": "Cavas page",
+      "path": "/a/myorgid-simple-app/canvas",
       "role": "Viewer",
       "addToNav": true
     },

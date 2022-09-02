@@ -1,4 +1,4 @@
-import { PluginPage } from '@grafana/runtime';
+import { PluginPage } from 'PluginPage';
 import { Card, VerticalGroup } from '@grafana/ui';
 import React from 'react';
 
@@ -22,7 +22,7 @@ export function CatalogPage() {
     <PluginPage>
       <VerticalGroup>
         {items.map((item, index) => (
-          <Card href={`/a/myorgid-simple-app/items/${index}`} key={index}>
+          <Card href={`/a/myorgid-simple-app/catalog/${index}`} key={index}>
             <Card.Heading>{item.title}</Card.Heading>
             <Card.Description>{item.description}</Card.Description>
           </Card>

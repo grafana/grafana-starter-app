@@ -1,5 +1,5 @@
-import { PluginPage } from '@grafana/runtime';
 import { Field, FieldSet, Input } from '@grafana/ui';
+import { PluginPage } from 'PluginPage';
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { items } from './CatalogPage';

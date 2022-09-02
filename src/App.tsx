@@ -1,18 +1,24 @@
 import { AppRootProps } from '@grafana/data';
 import { CatalogPage } from './pages/CatalogPage';
-import { GraphPage } from './pages/GraphPage';
+import { CanvasPage } from './pages/CanvasPage';
 import { ItemPage } from './pages/ItemPage';
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-
-export const PLUGIN_URL_PATH = '/a/myorgid-simple-app';
+import { config } from '@grafana/runtime';
+import { useNavModel } from 'utils/hooks';
+import { PLUGIN_URL_PATH } from 'types';
 
 export function App(props: AppRootProps) {
+  if (!config.featureToggles.topnav) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useNavModel(props);
+  }
+
   return (
     <Switch>
-      <Route exact path={`${PLUGIN_URL_PATH}/`} component={CatalogPage} />
-      <Route exact path={`${PLUGIN_URL_PATH}/items/:id?`} component={ItemPage} />
-      <Route exact path={`${PLUGIN_URL_PATH}/graph`} component={GraphPage} />
+      <Route exact path={`${PLUGIN_URL_PATH}/catalog`} component={CatalogPage} />
+      <Route exact path={`${PLUGIN_URL_PATH}/catalog/:id?`} component={ItemPage} />
+      <Route exact path={`${PLUGIN_URL_PATH}/canvas`} component={CanvasPage} />
     </Switch>
   );
 }
