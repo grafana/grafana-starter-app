@@ -1,5 +1,5 @@
-import { dateTime, FieldType, DataFrame, PanelData, LoadingState, toDataFrame } from '@grafana/data';
-import { PanelRenderer, PluginPageLayout } from '@grafana/runtime';
+import { dateTime, FieldType, DataFrame, PanelData, LoadingState, toDataFrame, PageLayoutType } from '@grafana/data';
+import { PanelRenderer } from '@grafana/runtime';
 import { LegendDisplayMode, PanelChrome, PanelChromeProps } from '@grafana/ui';
 import { PluginPage } from 'PluginPage';
 import React from 'react';
@@ -91,7 +91,7 @@ export function CanvasPage() {
   };
 
   return (
-    <PluginPage layout={PluginPageLayout?.Canvas}>
+    <PluginPage layout={PageLayoutType?.Canvas}>
       <PanelChrome {...panelProps}>
         {(innerWidth, innerHeight) => (
           <PanelRenderer
