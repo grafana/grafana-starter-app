@@ -3,30 +3,37 @@
   "type": "app",
   "name": "Simple App",
   "id": "myorgid-simple-app",
-
   "info": {
     "description": "Grafana App Plugin Template",
     "author": {
       "name": "Your Name"
     },
-    "keywords": ["panel", "template"],
+    "keywords": [
+      "panel",
+      "template"
+    ],
     "logos": {
       "small": "img/logo.svg",
       "large": "img/logo.svg"
     },
     "links": [
-      { "name": "Website", "url": "https://github.com/grafana/grafana-starter-app" },
-      { "name": "License", "url": "https://github.com/grafana/grafana-starter-app/blob/master/LICENSE" }
+      {
+        "name": "Website",
+        "url": "https://github.com/grafana/grafana-starter-app"
+      },
+      {
+        "name": "License",
+        "url": "https://github.com/grafana/grafana-starter-app/blob/master/LICENSE"
+      }
     ],
     "screenshots": [],
     "version": "%VERSION%",
     "updated": "%TODAY%"
   },
-
   "includes": [
     {
       "type": "page",
-      "name": "Root Page (react)",
+      "name": "Home",
       "path": "/a/myorgid-simple-app",
       "role": "Viewer",
       "addToNav": true,
@@ -34,8 +41,15 @@
     },
     {
       "type": "page",
-      "name": "Root Page (Tab B)",
-      "path": "/a/myorgid-simple-app/?tab=b",
+      "name": "Catalog",
+      "path": "/a/myorgid-simple-app/catalog",
+      "role": "Viewer",
+      "addToNav": true
+    },
+    {
+      "type": "page",
+      "name": "Cavas page",
+      "path": "/a/myorgid-simple-app/canvas",
       "role": "Viewer",
       "addToNav": true
     },
@@ -57,7 +71,6 @@
       "path": "dashboards/stats.json"
     }
   ],
-
   "dependencies": {
     "grafanaDependency": ">=7.0.0",
     "grafanaVersion": "7.0.0",
