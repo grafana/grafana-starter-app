@@ -34,7 +34,7 @@
     {
       "type": "page",
       "name": "Home",
-      "path": "/a/myorgid-simple-app/home",
+      "path": "/a/myorgid-simple-app",
       "role": "Viewer",
       "addToNav": true,
       "defaultNav": true
@@ -44,7 +44,7 @@
       "name": "Catalog",
       "path": "/a/myorgid-simple-app/catalog",
       "role": "Viewer",
-      "addToNav": true,
+      "addToNav": true
     },
     {
       "type": "page",
