@@ -33,11 +33,18 @@
   "includes": [
     {
       "type": "page",
+      "name": "Home",
+      "path": "/a/myorgid-simple-app/home",
+      "role": "Viewer",
+      "addToNav": true,
+      "defaultNav": true
+    },
+    {
+      "type": "page",
       "name": "Catalog",
       "path": "/a/myorgid-simple-app/catalog",
       "role": "Viewer",
       "addToNav": true,
-      "defaultNav": true
     },
     {
       "type": "page",

@@ -7,6 +7,7 @@ import { Route, Switch } from 'react-router-dom';
 import { config } from '@grafana/runtime';
 import { useNavModel } from 'utils/hooks';
 import { PLUGIN_URL_PATH } from 'types';
+import { HomePage } from 'pages/HomePage';
 
 export function App(props: AppRootProps) {
   if (!config.featureToggles.topnav) {
@@ -16,6 +17,7 @@ export function App(props: AppRootProps) {
 
   return (
     <Switch>
+      <Route exact path={`${PLUGIN_URL_PATH}/`} component={HomePage} />
       <Route exact path={`${PLUGIN_URL_PATH}/catalog`} component={CatalogPage} />
       <Route exact path={`${PLUGIN_URL_PATH}/catalog/:id?`} component={ItemPage} />
       <Route exact path={`${PLUGIN_URL_PATH}/canvas`} component={CanvasPage} />

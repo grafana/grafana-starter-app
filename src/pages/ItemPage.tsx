@@ -7,7 +7,7 @@ import { items } from './CatalogPage';
 export function ItemPage(props: RouteComponentProps<{ id: string }>) {
   const index = parseInt(props.match.params.id, 10);
   const item = items[index];
-  const pageNav = { text: item.title, subTitle: 'Edit data center details' };
+  const pageNav = { text: item.title, description: 'Edit data center details' };
 
   return (
     <PluginPage pageNav={pageNav}>
